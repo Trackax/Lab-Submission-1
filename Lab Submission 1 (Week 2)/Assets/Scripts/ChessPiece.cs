@@ -6,6 +6,7 @@ using System.ComponentModel;
 
 public class ChessPiece : MonoBehaviour
 {
+    // Createss the Chess Piece Types
     public enum ChessType
     {
         PawnWhite,
@@ -22,6 +23,7 @@ public class ChessPiece : MonoBehaviour
         KingBlack
     }
 
+    // Assigns Images to Types
     private string pawnWhite = "Pawn(White)";
     private string rookWhite = "Rook(White)";
     private string knightWhite = "Knight(White)";
@@ -36,6 +38,7 @@ public class ChessPiece : MonoBehaviour
     private string kingBlack = "King(Black)";
     public ChessType currentChessType;
 
+    // Points for Gizmo Lines to Connect
     public Transform pawnTarget1;
     public Transform pawnTarget2;
     public Transform rookTarget1;
@@ -75,6 +78,7 @@ public class ChessPiece : MonoBehaviour
     public Transform kingTarget7;
     public Transform kingTarget8;
 
+    // Makes the Chess Piece Visible
     private void OnDrawGizmos()
     {
         switch (currentChessType)
@@ -118,6 +122,7 @@ public class ChessPiece : MonoBehaviour
         }
     }
 
+    // Draws the Lines for the Moves
     private void OnDrawGizmosSelected()
     {
         switch (currentChessType)

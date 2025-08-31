@@ -6,6 +6,7 @@ using System.ComponentModel;
 
 public class ChessBoard : MonoBehaviour
 {
+    // Draws the lines for the Chessboard
     private void OnDrawGizmos()
     {
         Gizmos.color = Color.black;
